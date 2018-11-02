@@ -44,6 +44,7 @@ publish {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(path: ':wheelview')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(path: ':wheelview')
+    implementation project(path:':x5webview')
 }

@@ -5,10 +5,13 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 
+import com.tencent.smtt.export.external.TbsCoreSettings;
 import com.tencent.smtt.sdk.QbSdk;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
+
+import java.util.HashMap;
 
 /**
  * Created by QiaoJunChao on 2018/11/2.
@@ -59,6 +62,12 @@ public class X5WebView extends WebView {
     }
 
     public static void initQbSdk(Context context){
+
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put(TbsCoreSettings.TBS_SETTINGS_USE_SPEEDY_CLASSLOADER, true);
+        QbSdk.initTbsSettings(map);
+
+
         QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
 
             @Override
