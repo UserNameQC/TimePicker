@@ -46,5 +46,5 @@ publish {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(path: ':wheelview')
-    implementation project(path:':x5webview')
+    //implementation project(path:':x5webview')
 }
